@@ -51,6 +51,7 @@ public class acr_add_files extends Fragment {
     ImageView pp_size_photo;
 
     Uri image_Uri;
+    ImageView backActivity;
 
     public acr_add_files() {
         // Required empty public constructor
@@ -122,6 +123,14 @@ public class acr_add_files extends Fragment {
                 else{
                     //system os < marshmallow
                 }
+            }
+        });
+
+        backActivity = v.findViewById(R.id.general_back_activity);
+        backActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Dashboard.class));
             }
         });
 
