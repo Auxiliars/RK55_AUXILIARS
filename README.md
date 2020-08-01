@@ -10,3 +10,16 @@
 
 
 ## Vigilancia - is the app that will be installed on criminals phone
+
+## Login And Access Credentials
+    
+  ### Police on duty :- 
+  Username: as0001
+  Password: 1234
+  Otp code : 123456
+  ### Website admin :- 
+  Username: ad007
+  Password: 1234
+  ### Website Police :- 
+  Username: pc01
+  Password: 123
