@@ -25,6 +25,11 @@
 
       },
       {
+        "source":"/criminalStats",
+        "destination":"/webStats.html"
+
+      },
+      {
         "source":"/jsontoexcel",
         "destination":"/jsontoexcel.html"
       }
