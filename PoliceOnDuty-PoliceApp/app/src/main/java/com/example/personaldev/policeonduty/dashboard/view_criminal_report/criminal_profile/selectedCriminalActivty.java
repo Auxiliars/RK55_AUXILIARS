@@ -12,12 +12,16 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.personaldev.policeonduty.R;
+import com.example.personaldev.policeonduty.dashboard.heat_map.Heat_Map;
+import com.example.personaldev.policeonduty.dashboard.main.Dashboard;
 import com.example.personaldev.policeonduty.dashboard.toolbar.Toolbar_notification;
 import com.example.personaldev.policeonduty.dashboard.view_criminal_report.CriminalModel;
+import com.example.personaldev.policeonduty.dashboard.view_criminal_report.Criminal_detailed_view;
 import com.example.personaldev.policeonduty.dashboard.view_criminal_report.Names;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -35,6 +39,7 @@ public class selectedCriminalActivty extends AppCompatActivity {
     TextInputLayout a,b,c,d,e,f,g,h,i,j;
     TextInputEditText email_layout;
     TextView tvCriminal,id_layout;
+    ImageView backActivity;
     Button sc_btn_inspect;
     String ID;
     
@@ -49,6 +54,14 @@ public class selectedCriminalActivty extends AppCompatActivity {
         //add this to remove notification bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_selected_criminal_activty);
+
+        backActivity = findViewById(R.id.general_back_activity);
+        backActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(selectedCriminalActivty.this, Criminal_detailed_view.class));
+            }
+        });
 
         sc_btn_inspect = findViewById(R.id.sc_btn_inspect_criminal);
         sc_btn_inspect.setOnClickListener(new View.OnClickListener() {

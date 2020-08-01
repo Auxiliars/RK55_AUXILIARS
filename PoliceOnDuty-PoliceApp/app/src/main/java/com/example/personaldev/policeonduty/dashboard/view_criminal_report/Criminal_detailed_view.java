@@ -13,10 +13,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.personaldev.policeonduty.R;
+import com.example.personaldev.policeonduty.dashboard.main.Dashboard;
+import com.example.personaldev.policeonduty.dashboard.view_criminal_report.criminal_profile.Inspect_Criminal;
 import com.example.personaldev.policeonduty.dashboard.view_criminal_report.criminal_profile.selectedCriminalActivty;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,6 +35,8 @@ public class Criminal_detailed_view extends AppCompatActivity implements com.exa
 
     Toolbar toolbar;
     RecyclerView recyclerView;
+
+    ImageView backActivity;
 
     List<CriminalModel> criminalModelList = new ArrayList<>();
     private FirebaseDatabase mdataBase;
@@ -47,7 +53,13 @@ public class Criminal_detailed_view extends AppCompatActivity implements com.exa
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_criminal_detailed_view);
 
-
+        backActivity = findViewById(R.id.general_back_activity);
+        backActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Criminal_detailed_view.this, Dashboard.class));
+            }
+        });
 
         //Getting Content From Firebase
         mdataBase = FirebaseDatabase.getInstance();

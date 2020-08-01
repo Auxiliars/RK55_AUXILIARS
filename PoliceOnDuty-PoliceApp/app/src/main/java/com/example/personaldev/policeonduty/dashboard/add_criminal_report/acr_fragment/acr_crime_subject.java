@@ -1,5 +1,6 @@
 package com.example.personaldev.policeonduty.dashboard.add_criminal_report.acr_fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,8 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.personaldev.policeonduty.R;
+import com.example.personaldev.policeonduty.dashboard.add_criminal_report.Add_Criminal_Report;
+import com.example.personaldev.policeonduty.dashboard.main.Dashboard;
+import com.example.personaldev.policeonduty.dashboard.view_criminal_report.Criminal_detailed_view;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +33,7 @@ public class acr_crime_subject extends Fragment {
     private String mParam2;
 
     Button btn_cs_nxt_fragment;
+    ImageView backActivity;
 
     public acr_crime_subject() {
         // Required empty public constructor
@@ -76,6 +82,14 @@ public class acr_crime_subject extends Fragment {
                 transaction.replace(R.id.acr_main_holder, acr_cld);
                 transaction.commit();
 
+            }
+        });
+
+        backActivity = v.findViewById(R.id.general_back_activity);
+        backActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Dashboard.class));
             }
         });
 

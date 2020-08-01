@@ -34,7 +34,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     //Variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Toolbar toolbar;
+
+    Toolbar toolbar1;
+
     //for Criminal detailed(recycler view)
     Button db1_btn, db2_btn, db3_btn, db4_btn;
     ImageView notification_bell;
@@ -102,20 +104,20 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             }
         });
 
-        Toolbar toolbar = findViewById(R.id.common_toolbar);
-        setSupportActionBar(toolbar);
+        toolbar1 = findViewById(R.id.common_toolbar);
+        setSupportActionBar(toolbar1);
 
         /*------Hooks-------*/
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.common_toolbar);
+//        toolbar1 = findViewById(R.id.common_toolbar);
 
         /*------ToolBar-------*/
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar1);
 
         /*------Navigation Drawer Menu-------*/
         navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar1, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 

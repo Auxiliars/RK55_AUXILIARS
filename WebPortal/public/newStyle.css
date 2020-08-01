@@ -15,11 +15,25 @@ body {
   justify-content: center;
   min-height: 100%;
   font-size: 1.6rem;
-  background: tomato; // fallback for older browsers
-  background: -webkit-linear-gradient(135deg, #2D3A62, #55375E); 
+  background: #bde5ff; // fallback for older browsers
+  /*background: -webkit-linear-gradient(135deg, #2D3A62, #55375E); 
   background: -o-linear-gradient(135deg, #2D3A62, #55375E); 
   background: -moz-linear-gradient(135deg, #2D3A62, #55375E);  
-  background-image: linear-gradient(135deg, #2D3A62, #55375E); 
+  background-image: linear-gradient(135deg, #2D3A62, #55375E); */
+}
+button{
+  margin-top: 10px;
+}
+.btn{
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn:hover {
+  background-color: royalblue;
 }
 
 .download-wrapper {
@@ -29,7 +43,7 @@ body {
     opacity: .7;
   }
   
-  i.material-icons {
+  .material-icons {
     font-size: 30px;
     color: #fff;
     height: 30px;
@@ -46,4 +60,5 @@ body {
     font-size: 22px;
     font-family: 'Abel', sans-serif;
   }
-}
+
+
