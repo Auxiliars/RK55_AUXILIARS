@@ -6,7 +6,7 @@
 ## Police On Duty - is our app for police
 
 
-## Webportal- is for both polic and admin to manage accounts using website
+## Webportal- is for both police and admins to manage accounts using website
 
 
 ## Vigilancia - is the app that will be installed on criminals phone
