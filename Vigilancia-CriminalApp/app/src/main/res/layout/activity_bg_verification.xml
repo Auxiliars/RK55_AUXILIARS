@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Authentication_Dashboard.background_Verfication.bg_verification">
+
+    <!-- START Toolbar Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_background_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/appMainColor"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp">
+
+
+            <TextView
+                android:id="@+id/Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="Background Authentication"
+                android:textColor="@color/basic_white"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- END Toolbar Header -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/dashboard_layout_bg"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/bgv_slogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/antic"
+            android:text="Create a 360 panoramic Video around you for Authentication."
+            android:textAlignment="center"
+            android:textColor="@color/basic_red"
+            android:textSize="20sp" />
+
+        <!-- line below slogan -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/golden_brown" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp">
+
+            <Button
+                android:id="@+id/bgv_btn_capture"
+                android:layout_width="match_parent"
+                android:onClick="captureVideo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_button_amc"
+                android:text="Capture Video"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/basic_white" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:fontFamily="@font/baloo"
+            android:id="@+id/bgv_btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button"
+            android:text="Send for Authentication"
+            android:textColor="@color/basic_white" />
+    </LinearLayout>
+
+</LinearLayout>

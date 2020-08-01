@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home_icon"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/nav_statistics_icon"
+            android:title="Statistics" />
+        <item
+            android:id="@+id/nav_SOS"
+            android:icon="@drawable/nav_sos_icon"
+            android:title="SOS" />
+    </group>
+
+    <item android:title="Dashboard">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_dbd3_viewCriminalRepo"
+                    android:icon="@drawable/nav_dbd3_view_criminal_icon"
+                    android:title="Track Criminal" />
+
+                <item
+                    android:id="@+id/nav_dbd2_addCriminalRepo"
+                    android:icon="@drawable/nav_dbd2_add_criminal_icon"
+                    android:title="Add Criminal Report" />
+
+
+                <item
+                    android:id="@+id/nav_dbd1_heatMap"
+                    android:icon="@drawable/nav_dbd1_heat_map_icon"
+                    android:title="Heat Map" />
+
+                <item
+                    android:id="@+id/nav_dbd4_SOS_repo"
+                    android:icon="@drawable/nav_dbd4_sos_report_icon"
+                    android:title="SOS Report" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_app_my_profile"
+                    android:icon="@drawable/nav_profile_icon"
+                    android:title="My Profile" />
+                <item
+                    android:id="@+id/nav_app_setting"
+                    android:icon="@drawable/nav_setting_icon"
+                    android:title="Setting" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_privacy_policy"
+                    android:icon="@drawable/nav_privacy_policy_icon"
+                    android:title="Privacy Policy" />
+                <item
+                    android:id="@+id/nav_rate"
+                    android:icon="@drawable/nav_rate_us_icon"
+                    android:title="Rate" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

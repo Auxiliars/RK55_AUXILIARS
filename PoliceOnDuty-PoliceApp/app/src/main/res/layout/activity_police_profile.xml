@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.nav_drawer.police_profile">
+
+    <!-- START Header with Police FullName in Relative Layout -->
+    <RelativeLayout
+        android:id="@+id/layout_profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_profile_bg_layout"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/general_back_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_button"
+            android:src="@drawable/general_back_arrow_icon" />
+
+        <ImageView
+            android:id="@+id/police_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_profile_img"
+            android:padding="5dp"
+            android:src="@drawable/eg_profile_pic_img" />
+
+        <TextView
+            android:id="@+id/police_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/police_profile_image"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:text="F_Name"
+            android:textColor="@color/basic_white"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/criminal_Last_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/police_full_name"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:text="S_Name"
+            android:textColor="@color/basic_white"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/police_full_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/police_profile_image"
+            android:background="@color/basic_white" />
+
+        <TextView
+            android:id="@+id/User_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/police_full_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/police_profile_image"
+            android:includeFontPadding="false"
+            android:text="Username"
+            android:textColor="@color/basic_white"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+    <!-- END Header with Police FullName in Relative Layout -->
+
+    <!-- START CardView with Police Id, Admin Id in Linear Layout -->
+    <LinearLayout
+        android:id="@+id/LL_child1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginRight="30dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/basic_black"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:id="@+id/label_police_Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="My Id"
+                    android:textColor="@color/golden_brown"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/police_Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_police_Id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="a26xAdb"
+                    android:textColor="@color/basic_white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/basic_black"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:id="@+id/label_Admin_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Admin Id"
+                    android:textColor="@color/golden_brown"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/Admin_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_Admin_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="xx345fft3"
+                    android:textColor="@color/basic_white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <!-- END CardView with Police Id, Admin Id in Linear Layout -->
+
+    <!-- START Police Profile -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LL_child2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Police Designation -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/police_Designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Designation"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_designation_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="Profile_Designation"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Police Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Police_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="E-mail"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_mail_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:text="PoliceProfile_123@gmail.com"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Police Age and D.O.B in Relative Layout -->
+            <RelativeLayout
+                android:id="@+id/rl_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Police Age -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/police_age"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Age"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_age_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="45"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Police D.O.B -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/police_dob"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="D.O.B"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_dob_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="01 Jan 1985"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- Police Gender -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/criminal_Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Gender"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_gender_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="Male"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Label Police Station location Details -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/police_Station_location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Police Station Location"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- line below Label Police Station location Details -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@+id/police_Station_location_details"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/golden_brown" />
+
+            <!-- Latitude, Longitude and Map image in Relative Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Latitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loc_latitude"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="70dp"
+                    android:hint="Latitude"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:text="+200.1234567899"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Longitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loc_longitude"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Longitude"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:text="-200.1234567899"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Map image  -->
+                <ImageView
+                    android:id="@+id/navigate_map_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/pro_map_image" />
+
+            </RelativeLayout>
+
+            <!-- Police Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/police_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Address"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_home_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="Full Address"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Police Address ZipCode -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Police_ZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="ZipCode"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_zip_code_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:text="496001"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Police City and State in Relative Layout -->
+            <RelativeLayout
+                android:id="@+id/rl_parent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Police City -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/police_city"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="City"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_pin_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="Raipur"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Police State -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/police_state"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="State"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_pin_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="Chhattisgarh"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- END Police Profile -->
+
+</LinearLayout>

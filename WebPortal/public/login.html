@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./auxiliars.png"/>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="./login.css">
+            <!-- update the version number as needed -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+        <!-- include only the Firebase features as you need -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <!-- <script defer src="/__/firebase/7.15.4/firebase-auth.js"></script>
+        <script defer src="/__/firebase/7.15.4/firebase-database.js"></script> -->
+        <!-- <script defer src="/__/firebase/7.15.4/firebase-messaging.js"></script>
+        <script defer src="/__/firebase/7.15.4/firebase-storage.js"></script> -->
+        <!-- initialize the SDK after all desired features are loaded -->
+        <!-- <script defer src="/__/firebase/init.js"></script> -->
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+</head>
+<body>
+    <div class="main-form">
+
+    <form method="GET" id="login-form">
+    <form action="" method="POST">
+        <select name="position" id="position">
+            <option value="admin">Admin</option>
+            <option value="police">Police</option>
+          </select>
+
+    <input type="text" name="userName" id="userName" placeholder="User Name">
+    <input type="text" name="password" id="password" placeholder="Password">
+    <Button id="submit-btn">Submit</Button>
+    </form>
+</div>
+<script src="./login.js"></script>
+</body>
+<script src="login.js"></script>
+</html>

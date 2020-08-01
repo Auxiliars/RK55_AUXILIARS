@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.personaldev.policeonduty.dashboard.view_criminal_report.criminal_profile.track_criminal.TrackCriminal"
+   >
+
+    <!-- START Toolbar Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/appMainColor"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/general_back_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_button"
+                android:src="@drawable/general_back_arrow_icon" />
+
+            <TextView
+                android:id="@+id/text_Inspect_Criminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_toRightOf="@+id/general_back_activity"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Inspect Criminal"
+                android:textColor="@color/basic_white"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- END Toolbar Header -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/criminal_recycler_view"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Label Current location Details -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/icr_Current_Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="Current Location / Timeline"
+                android:textColor="@color/basic_black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- line below Label Current location Details -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/criminal_location_details"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/golden_brown" />
+
+        <!-- Latitude, Longitude and Map image in Relative Layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <!-- Latitude -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/icr_loc_latitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="62dp"
+                android:hint="Latitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_Lat"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_location_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="numberSigned"
+                    android:text="-2.1313224232"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Longitude -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/icr_loc_longitude"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:hint="Longitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_Longi"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_location_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="numberSigned"
+                    android:text="-44.34543433442"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Map image  -->
+            <ImageView
+                android:id="@+id/icr_map_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="230dp"
+                android:layout_marginRight="8dp"
+                android:onClick="track_Criminal"
+                android:src="@drawable/pro_map_image" />
+
+        </RelativeLayout>
+
+        <!-- Label Background Video Authentication -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/icr_360_video_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="Background Video Authentication Status"
+                android:textColor="@color/basic_black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- line below Label Background Video Authentication -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/criminal_location_details"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/golden_brown" />
+
+        <!-- Content 360^ Video Authentication -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/icr_verify_video"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Verify Video"
+                android:textAllCaps="false"
+                android:textColor="@color/basic_white" />
+
+            <Button
+                android:id="@+id/icr_verify_video_tick"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icr_verify_video"
+                android:background="#00000000"
+                android:drawableRight="@drawable/inspect_tick_icon"
+                android:drawablePadding="10dp" />
+
+        </RelativeLayout>
+
+        <!-- Label Biometric Status -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/icr_label_biometric_Status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="Biometric Status"
+                android:textColor="@color/basic_black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- line below Label  Biometric Status -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/criminal_location_details"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/golden_brown" />
+
+        <!-- Content Biometric Status -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/icr_verify_fingerprint"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Verify Fingerprint"
+                android:textAllCaps="false"
+                android:textColor="@color/basic_white" />
+
+            <Button
+                android:id="@+id/icr_verify_fingerprint_tick"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icr_verify_fingerprint"
+                android:background="#00000000"
+                android:drawableRight="@drawable/inspect_tick_icon"
+                android:drawablePadding="10dp" />
+
+        </RelativeLayout>
+
+        <!-- Inspect Criminal Bottom Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="55dp">
+
+            <Button
+                android:id="@+id/icr_btn_done"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_red"
+                android:drawableStart="@drawable/inspect_tick_all_icon"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Done"
+                android:textColor="@color/basic_white" />
+
+            <Button
+                android:id="@+id/icr_btn_hle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_red"
+                android:drawableStart="@drawable/inspect_hle_icon"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="H.L.E."
+                android:textColor="@color/basic_white" />
+
+            <Button
+                android:id="@+id/icr_btn_Call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_red"
+                android:drawableStart="@drawable/inspect_call_icon"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Call"
+                android:textColor="@color/basic_white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

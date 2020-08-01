@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Authentication_Dashboard.Authentication_Dashboard">
+
+    <!-- START Toolbar Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_criminal_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/appMainColor"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp">
+
+
+            <TextView
+                android:id="@+id/Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="Dashboard"
+                android:textColor="@color/basic_white"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- END Toolbar Header -->
+
+    <!-- START Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="565dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/dashboard_layout_bg"
+        android:orientation="vertical">
+
+        <!-- Periodic Verificatio Layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/label_next_authentication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="#00000000"
+                android:clickable="false"
+                android:fontFamily="@font/antic"
+                android:gravity="left"
+                android:paddingLeft="17dp"
+                android:text="Periodic Authentication at : "
+                android:textAllCaps="false"
+                android:textColor="@color/basic_red"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/label_next_authentication"
+                android:background="#00000000"
+                android:clickable="false"
+                android:fontFamily="@font/bungee"
+                android:text="10:00 AM"
+                android:textColor="@color/golden_brown"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <!-- line below Label Crime location Details -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/golden_brown" />
+
+        <!-- Box 1-->
+        <RelativeLayout
+            android:id="@+id/layout_Dashboard_Box1"
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <RelativeLayout
+                android:id="@+id/Dashboard_Box1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_dashboard_1">
+
+                <TextView
+                    android:id="@+id/db1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:padding="10dp"
+                    android:text="Bio-Metric Authentication"
+                    android:textAlignment="center"
+                    android:textColor="@color/basic_black"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/db1_image"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/fingerprint_image" />
+
+        </RelativeLayout>
+
+        <!-- Box 2-->
+        <RelativeLayout
+            android:id="@+id/layout_Dashboard_Box2"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="-20dp">
+
+            <RelativeLayout
+                android:id="@+id/Dashboard_Box2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_dashboard_2">
+
+                <TextView
+                    android:id="@+id/db2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:padding="10dp"
+                    android:text="Background Verification"
+                    android:textAlignment="center"
+                    android:textColor="@color/basic_black"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/db2_image"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="33dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/panoroma_icon" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:onClick="logout"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Log out"
+            android:textColor="@color/basic_white" />
+
+    </LinearLayout>
+</LinearLayout>

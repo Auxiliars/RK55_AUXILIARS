@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">PoliceOnDuty</string>
+
+    <!--OTP Screen Text -->
+
+    <string name="text_EnterOTPhere">Enter\nOTP\nHere</string>
+    <string name="otp_verification_text">Verification</string>
+    <string name="otp_description_text">Enter one time password sent on </string>
+
+    <!-- Dashboard Text -->
+
+    <string name="text_HeatMap">Heat Map</string>
+    <string name="text_AddCriminalReport">Add Criminal\nReport</string>
+    <string name="text_ViewCriminalReport">View Criminal\nReport</string>
+    <string name="text_SOS">SOS Report</string>
+    <string name="text_ExpandAll">Expand</string>
+    <string name="text_AddPlus">Add +</string>
+    <string name="text_View">View</string>
+
+    <!-- Drawer Text -->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- sit links -->
+    <string name="link_to_site">https://auxiliarsweb.web.app/</string>
+
+    <!-- crime Subject text -->
+    <string name="crime_subject_text">Mein geeta pe haath rakh ke kasam khata hun mein jo bhi bolunga sach bolunga, sach ke siva kuch ni bolunga.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

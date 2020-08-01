@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/jpg" href="./auxiliars.png"/>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+    <title>Auxiliars</title>
+
+        <!-- update the version number as needed -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+        <!-- include only the Firebase features as you need -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <!-- <script defer src="/__/firebase/7.15.4/firebase-auth.js"></script>
+        <script defer src="/__/firebase/7.15.4/firebase-database.js"></script> -->
+        <script defer src="/__/firebase/7.15.4/firebase-messaging.js"></script>
+        <script defer src="/__/firebase/7.15.4/firebase-storage.js"></script>
+        <!-- initialize the SDK after all desired features are loaded -->
+        <script defer src="/__/firebase/init.js"></script>
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <!-- <style media="screen">
+          body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+          #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+          #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+          #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+          #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+          #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+          #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+          #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+          @media (max-width: 600px) {
+            body, #message { margin-top: 0; background: white; box-shadow: none; }
+            body { border-top: 16px solid #ffa100; }
+          }
+        </style>
+         -->
+</head>
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Police On Duty</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="policeHomepage.html">Home </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="reportsList.html">Reports List </a>
+          </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="sosReports.html">SoS Reports <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+    </div>
+  </nav> -->
+  <div class="container">  
+  <h1>Criminal Report</h1>
+    
+        <form id="details_submit">
+          <div class="form-element">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Name.." required>
+          </div>
+          <div class="form-element">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Last Name.." required>
+            </div>
+            <div class="form-element">   
+              <label for="bdate">Birth Date</label>
+              <input type="date" id="start" name="dob"
+                      value="2018-07-22"
+                      min="1940-01-01" max="2026-12-31" required>
+                    </div>
+                    <div class="form-element">
+              <div>
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" placeholder="Age" required>
+              </div>
+            </div>
+            <div class="form-element">
+              <label for="contact">Contact Number</label>
+              <input type="number" id="contactNumbe" name="contactNumber" placeholder="Contact Number" required>
+            </div>
+            <div class="form-element">
+              <label for="location">Crime Location</label>
+              <input type="number" id="locationLatitude" step="any"  name="locationLatitude" placeholder="Latitude" required>
+              <input type="number" id="locationLongitude" step="any" name="locationLongitude" placeholder="Longitude" required>
+            </div>
+            <div class="form-element">
+              <label for="state">ZipCode</label><br>
+              <input type="number" placeholder = "Zip Code" pattern="[0-9]" maxlength="6" minlength="6" required id="zipcode" class="input in-zip" id="zipcode" name="zipcode">
+            </div>
+            
+              <div class="form-element">
+                <label for="state">State</label> 
+                <input type="text" name="state" id="state" placeholder = "State"  required>
+              </div>
+              <div class="form-element">
+                <label for="state">City</label> 
+                <input type="text" name = "city" id="city" placeholder = "City"  required>
+              </div>
+             
+              <div class="form-element-textarea"> 
+              
+            
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write Complain here.." style="height:200px"></textarea>
+                </div>
+              <input id="submit1" type="submit" value="Submit" >
+          
+        </form>
+      </div> 
+</body>
+<!-- <script>
+    const inputZip = document.getElementById('zipcode')
+const inputState = document.getElementById('state')
+const inputCity =  document.getElementById('city')
+//For Api Reference Checkout 'http://www.postalpincode.in/Api-Details'
+urlZip = "https://api.postalpincode.in/pincode/"
+let city ="",state="";
+inputZip.addEventListener('keypress',(e)=>{
+    
+    //console.log(e.key)
+    if(parseInt(e.key)>=0 && parseInt(e.key) <=9){
+       
+    }
+    if(inputZip.value.length>=6){
+        inputZip.value = inputZip.value.substr(0,5)
+    }
+})
+inputZip.addEventListener('blur',()=>{
+    
+    let urlZipreq = urlZip+inputZip.value;
+    const Http = new XMLHttpRequest();
+    
+    Http.open("GET", urlZipreq);
+    Http.send();
+    
+    Http.onreadystatechange = (e) => {
+      var resp = JSON.parse(Http.responseText)[0]["PostOffice"][0]
+      city = resp["Block"]
+      state = resp["State"]
+      
+      inputCity.value = city
+      inputState.value = state
+    }
+})</script> -->
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard.view_criminal_report.criminal_profile.selectedCriminalActivty"
+    android:id="@+id/sc_main_holder">
+
+    <!-- START Header with Criminal FullName in Relative Layout -->
+    <RelativeLayout
+        android:id="@+id/layout_profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_profile_bg_layout"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/general_back_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_button"
+            android:src="@drawable/general_back_arrow_icon" />
+
+        <ImageView
+            android:id="@+id/criminal_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_profile_img"
+            android:padding="5dp"
+            android:src="@drawable/eg_profile_pic_img" />
+
+        <TextView
+            android:id="@+id/selectedCriminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/criminal_profile_image"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:text="Name"
+            android:textColor="@color/basic_white"
+            android:textSize="24sp" />
+
+
+        <!-- TextView
+            android:id="@+id/criminal_Last_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/criminal_First_Name"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:text="Choudhary"
+            android:textColor="@color/basic_white"
+            android:textSize="24sp" /-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/selectedCriminal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/criminal_profile_image"
+            android:background="@color/basic_white" />
+
+        <TextView
+            android:id="@+id/User_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectedCriminal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/criminal_profile_image"
+            android:includeFontPadding="false"
+            android:text="abhayac15"
+            android:textColor="@color/basic_white"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+    <!-- END Header with Criminal FullName in Relative Layout -->
+
+    <!-- START CardView with Criminal Id, Phone No. in Linear Layout -->
+    <LinearLayout
+        android:id="@+id/LL_child1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginRight="30dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/basic_black"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:id="@+id/label_criminal_Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Criminal Id"
+                    android:textColor="@color/golden_brown"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/criminal_Id_dis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_criminal_Id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="a26xAdb"
+                    android:textColor="@color/basic_white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/basic_black"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:id="@+id/label_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Phone no."
+                    android:textColor="@color/golden_brown"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_phone_no"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="+1 1234567890"
+                    android:textColor="@color/basic_white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <!-- END CardView with Criminal Id, Phone No. in Linear Layout -->
+
+    <!-- START Find him Button -->
+    <Button
+        android:id="@+id/sc_btn_inspect_criminal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/rounded_button_red"
+        android:text="Inspect Criminal"
+        android:textAllCaps="false"
+        android:textColor="@color/basic_white" />
+    <!-- END Find him Button -->
+
+    <!-- START All Criminal Details -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LL_child2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Criminal Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="E-mail"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/criminal_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_mail_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:text="abhayac562@gmail.com"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal Age and D.O.B in Relative Layout -->
+            <RelativeLayout
+                android:id="@+id/rl_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Criminal Age -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/criminal_age"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Age"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_age_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="20"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Criminal D.O.B -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/criminal_dob"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="D.O.B"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_dob_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="01 Jan 2000"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- Criminal Gender -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/criminal_Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Gender"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_gender_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="Male"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Label Crime Subject -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/crime_Subject_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Crime Subject"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- line below Label Crime Subject -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/crime_Subject_label"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/golden_brown" />
+
+            <!-- Crime Subject -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/crime_Subject"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="@string/crime_subject_text"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Time of Crime -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/time_of_crime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Time of Crime"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_time_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="time"
+                    android:text="17:00"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date of Crime -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date_of_crime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Date of Crime"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/pro_date_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:text="11/07/2020"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Label Crime location Details -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/criminal_location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Crime Location Details"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- line below Label Crime location Details -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/criminal_location_details"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/golden_brown" />
+
+            <!-- Latitude, Longitude and Map image in Relative Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Latitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loc_latitude"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="70dp"
+                    android:hint="Latitude"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:text="+200.1234567899"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Longitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loc_longitude"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Longitude"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:text="-200.1234567899"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Map image  -->
+                <ImageView
+                    android:id="@+id/navigate_map_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/pro_map_image" />
+
+            </RelativeLayout>
+
+            <!-- Criminal Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/criminal_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Address"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_home_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="24/558, Boirdadar, Vinobanagar, Raigarh (C.G.)"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal ZipCode -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/criminal_ZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="ZipCode"
+                android:textColorHint="@color/appMainColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_zip_code_icon"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:text="496001"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal City and State in Relative Layout -->
+            <RelativeLayout
+                android:id="@+id/rl_parent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Criminal City -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/criminal_city"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:hint="City"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_pin_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="Raigarh"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Criminal State -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/criminal_state"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:hint="State"
+                    android:textColorHint="@color/appMainColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_pin_icon"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="Chhattisgarh"
+                        android:textColor="@color/basic_black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- END All Criminal Details -->
+
+</LinearLayout>

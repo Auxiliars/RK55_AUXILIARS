@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acr_frag_container_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard.add_criminal_report.acr_fragment.acr_criminal_location_details">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- START Toolbar Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_add_criminal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/appMainColor"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/general_back_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/rounded_button"
+                    android:src="@drawable/general_back_arrow_icon" />
+
+                <TextView
+                    android:id="@+id/selectedCriminal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:layout_toRightOf="@+id/general_back_activity"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Add Criminal Report"
+                    android:textColor="@color/basic_white"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- END Toolbar Header -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="565dp"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/criminal_recycler_view"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Label Crime location Details -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acr_criminal_location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/baloo"
+                    android:includeFontPadding="false"
+                    android:text="Crime Location Details"
+                    android:textColor="@color/basic_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- line below Label Crime location Details -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/criminal_location_details"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/golden_brown" />
+
+            <!-- Latitude, Longitude and Map image in Relative Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <!-- Latitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/acr_loc_latitude"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="62dp"
+                    android:hint="Latitude">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Longitude -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/acr_loc_longitude"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:hint="Longitude">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/pro_location_icon"
+                        android:drawablePadding="10dp"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Map image  -->
+                <ImageView
+                    android:id="@+id/acr_map_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/pro_map_image" />
+
+            </RelativeLayout>
+
+            <!-- Criminal Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acr_criminal_Address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_home_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal ZipCode -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acr_criminal_ZipCode"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ZipCode"
+                app:counterMaxLength="6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_zip_code_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal City -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acr_criminal_city"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_pin_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Criminal State -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acr_criminal_state"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="State">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pro_pin_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/acr_cld_btn_next_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="29.5dp"
+                android:background="@drawable/rounded_button"
+                android:text="Next"
+                android:textColor="@color/basic_white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

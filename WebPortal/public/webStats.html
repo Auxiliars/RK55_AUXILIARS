@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./auxiliars.png"/>
+    <title>Firebase Retrival</title>
+    <style>
+      #in,#in2{
+        border: 2px solid black;
+        padding: 20px;
+        height: 250px;
+        width: 500px;
+      }
+        .center{
+            margin: 20px auto;
+        }
+     
+    </style>
+</head>
+<body>
+    <div>
+    <div id="in2" style="color:blueviolet" class="center">
+      <canvas id="chart2" ></canvas>
+    </div>
+    <div id="in" style="color:blueviolet" class="center">
+      <canvas id="chart" ></canvas>
+    </div>
+    </div>    
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script async defer src="./index.js"></script>
+</html>
