@@ -36,8 +36,8 @@ import java.util.Locale;
 
 public class selectedCriminalActivty extends AppCompatActivity {
 
-    TextInputLayout a,b,c,d,e,f,g,h,i,j;
-    TextInputEditText email_layout;
+    TextInputLayout a,b,c,d,e,f,g,h,i;
+    TextInputEditText email_layout,j;
     TextView tvCriminal,id_layout;
     ImageView backActivity;
     Button sc_btn_inspect;
@@ -81,6 +81,7 @@ public class selectedCriminalActivty extends AppCompatActivity {
         g = findViewById(R.id.criminal_ZipCode);
         h = findViewById(R.id.criminal_city);
         i = findViewById(R.id.criminal_state);
+        j = findViewById(R.id.subject);
         email_layout = findViewById(R.id.criminal_email);
         id_layout = findViewById(R.id.criminal_Id_dis);
 
@@ -188,7 +189,7 @@ public class selectedCriminalActivty extends AppCompatActivity {
         g.getEditText().setText(zipcode);
         h.getEditText().setText(city);
         i.getEditText().setText(state);
-        j.getEditText().setText(report);
+        j.setText(report);
         email_layout.setText(email);
 
     }
