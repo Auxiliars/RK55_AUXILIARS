@@ -23,6 +23,11 @@
         "source":"/reportform",
         "destination":"/reportForm.html"
       }
+        ,
+      {
+        "source":"/downloadRecords",
+        "destination":"/downloadRecords.html"
+      }
     ]
   }
 }
