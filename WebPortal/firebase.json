@@ -22,7 +22,12 @@
       {
         "source":"/reportform",
         "destination":"/reportForm.html"
+      },
+      {
+        "source":"/jsontoexcel",
+        "destination":"/jsontoexcel.html"
       }
+    
     ]
   }
 }

@@ -14,9 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dashboard.view_criminal_report.criminal_profile.track_criminal.TrackCriminal">
+        <activity android:name=".dashboard.main.DashboardUser">
 
         </activity>
+        <activity android:name=".dashboard.view_criminal_report.criminal_profile.track_criminal.TrackCriminal"></activity>
         <activity android:name=".dashboard.nav_drawer.police_profile" />
         <activity android:name=".dashboard.view_criminal_report.criminal_profile.Inspect_Criminal" />
         <activity android:name=".dashboard.toolbar.Toolbar_notification" />
@@ -25,18 +26,17 @@
         <activity android:name=".dashboard.sos_report.SOS_Report" />
         <activity android:name=".dashboard.add_criminal_report.Add_Criminal_Report" />
         <activity android:name=".dashboard.heat_map.Heat_Map" />
-        <activity android:name=".dashboard.view_criminal_report.criminal_profile.selectedCriminalActivty"></activity>
-
+        <activity android:name=".dashboard.view_criminal_report.criminal_profile.selectedCriminalActivty" />
         <activity
             android:name=".dashboard.view_criminal_report.Criminal_detailed_view"
-            android:windowSoftInputMode="adjustPan">
-        </activity>
-
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name=".login.Verify_OTP_2" />
         <activity android:name=".signup.VerifyOTP" />
         <activity android:name=".signup.Signup" />
         <activity android:name=".login.Login" />
-        <activity android:name=".dashboard.main.Dashboard" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".dashboard.main.Dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Main_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,12 +48,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDxt8G9r9vqVTxE8-EvoqNaQICQpeQKtfw"
-            />
+            android:value="AIzaSyDxt8G9r9vqVTxE8-EvoqNaQICQpeQKtfw" />
     </application>
-
 
 </manifest>

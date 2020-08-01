@@ -54,8 +54,13 @@
         android:layout_marginTop="-30dp"
         android:background="@drawable/criminal_recycler_view"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingHorizontal="10dp"
+        >
 
+        <WebView
+            android:id="@+id/webViewStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
     <!-- End Statistics Content -->
 
