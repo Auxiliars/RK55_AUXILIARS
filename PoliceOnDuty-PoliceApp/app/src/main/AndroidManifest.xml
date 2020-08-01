@@ -15,11 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".dashboard.view_criminal_report.criminal_profile.track_criminal.TrackCriminal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".dashboard.nav_drawer.police_profile" />
         <activity android:name=".dashboard.view_criminal_report.criminal_profile.Inspect_Criminal" />
@@ -42,7 +38,11 @@
         <activity android:name=".login.Login" />
         <activity android:name=".dashboard.main.Dashboard"></activity>
         <activity android:name=".Main_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
