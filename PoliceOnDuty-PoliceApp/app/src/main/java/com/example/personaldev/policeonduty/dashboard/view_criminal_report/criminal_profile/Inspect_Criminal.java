@@ -143,8 +143,9 @@ public class Inspect_Criminal extends AppCompatActivity implements View.OnClickL
 
     public void track_Criminal(View view){
         Intent intent0 = new Intent(this, TrackCriminal.class).putExtra("ID",ID)
-                .putExtra("lat",lat)
-                .putExtra("longi",longi);
+                .putExtra("lat",Double.parseDouble(lat))
+                .putExtra("longi",Double.parseDouble(longi));
+
 
          startActivity(intent0);
     }

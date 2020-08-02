@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.firebase.firestore.CollectionReference;
@@ -53,7 +55,7 @@ public class TrackCriminal extends AppCompatActivity implements OnMapReadyCallba
     //fro Date Picker
     TextView mTv1, mTv2;
     Button mBtn1, mBtn2;
-
+    LatLng currentLatLng;
     Calendar c1,c2;
     DatePickerDialog dpd1, dpd2;
 
@@ -126,6 +128,11 @@ public class TrackCriminal extends AppCompatActivity implements OnMapReadyCallba
 
         /* END: code for Date Picker */
 
+
+        Intent intent = getIntent();
+        if(intent.getExtras()!=null){
+            currentLatLng = new LatLng(intent.getDoubleExtra("lat",0.000),intent.getDoubleExtra("longi",0.000));
+        }
     }
 
     @Override
@@ -165,7 +172,7 @@ public class TrackCriminal extends AppCompatActivity implements OnMapReadyCallba
             }
         });
 
-
+        googleMap.addMarker(new MarkerOptions().position(currentLatLng).title("Current Location"));
     }
 
     public void initPolyline(GoogleMap googleMap) {
