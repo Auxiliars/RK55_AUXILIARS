@@ -11,13 +11,13 @@
     tools:context=".dashboard.main.Dashboard"
     tools:openDrawer="start">
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/header"
-            app:menu="@menu/main_menu" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
         <LinearLayout
             android:id="@+id/toolbar_layout"
@@ -108,6 +108,60 @@
                                 android:layout_marginTop="33dp"
                                 android:layout_marginRight="5dp"
                                 android:src="@drawable/view_c_repo" />
+
+                        </RelativeLayout>
+
+                        <!-- Box 3.1 -->
+                        <RelativeLayout
+                            android:id="@+id/Dashboard31"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:layout_marginTop="-30dp">
+
+                            <RelativeLayout
+                                android:id="@+id/Dashboard31_Box"
+                                android:layout_width="match_parent"
+                                android:layout_height="140dp"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/rounded_dashboard_3">
+
+                                <TextView
+                                    android:id="@+id/db31_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/baloo"
+                                    android:includeFontPadding="false"
+                                    android:padding="5dp"
+                                    android:text="Face\nRecongnition"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/basic_black"
+                                    android:textSize="30sp" />
+
+                                <Button
+                                    android:id="@+id/db31_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#00000000"
+                                    android:padding="10dp"
+                                    android:drawableStart="@drawable/pro_designation_icon"
+                                    android:textColor="@color/basic_black" />
+
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/db31_image"
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="-20dp"
+                                android:src="@drawable/face_reg_image" />
 
                         </RelativeLayout>
 
