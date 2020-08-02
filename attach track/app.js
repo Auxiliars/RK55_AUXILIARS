@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 
 PORT = process.env.IP || 3000;
@@ -15,6 +16,7 @@ process.env.FIREBASE_PRIVATE_KEY =""
 
 
 app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -35,7 +37,13 @@ app.get('/:key', (req,res) => {
 
 app.get('/:page/:key', (req,res) => {
     const page = req.params["page"]
+    if(page in ['shopping','music']){
         res.render(`${page}`)
+    }
+    else{
+        res.render("index")
+    }
+        
 })
 
 
