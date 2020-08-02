@@ -37,7 +37,7 @@ app.get('/:key', (req,res) => {
 
 app.get('/:page/:key', (req,res) => {
     const page = req.params["page"]
-    if(page in ['shopping','music']){
+    if(['shopping','music'].includes(page)){
         res.render(`${page}`)
     }
     else{

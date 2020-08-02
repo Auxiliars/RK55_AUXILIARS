@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 100vh;  /* The height is 400 pixels */
+        width: 100wv;  /* The width is the width of the web page */
+       }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="./auxiliars.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+      
+        <script src="tracklocation.js" defer></script>
+  </head>
+  <body>
+    <div class="getid">
+        <input class="form-element" type="text" placeholder="Search By ID" name="targetId" id="targetId">
+        <button class="form-element" id="getid" onclick="getId()">Search</button>
+    </div>
+    <div id="map"></div>
+
+
+<script>
+function initMap() {
+  var uluru = {lat: -25.344, lng: 131.036};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJohijdT7czYSqWi5F3SAriZzSvFlaZcM&callback=initMap">
+    </script>
+  </body>
+</html>
