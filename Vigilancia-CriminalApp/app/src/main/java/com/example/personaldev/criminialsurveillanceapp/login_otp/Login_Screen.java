@@ -37,7 +37,7 @@ public class Login_Screen extends AppCompatActivity {
 
         if (userName.equals("") || passWord.equals("")) {
             Toast.makeText(this, "Please fill All the fields", Toast.LENGTH_SHORT).show();
-        } else if (userName.equals("admin") && passWord.equals("admin")) {
+        } else if (userName.equals("cr0001") && passWord.equals("1234")) {
             startActivity(new Intent(Login_Screen.this, Authentication_Dashboard.class));
         } else {
             Toast.makeText(this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
