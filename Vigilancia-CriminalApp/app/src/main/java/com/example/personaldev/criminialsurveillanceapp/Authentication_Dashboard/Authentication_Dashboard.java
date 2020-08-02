@@ -18,17 +18,37 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.personaldev.criminialsurveillanceapp.Authentication_Dashboard.background_Verfication.bg_verification;
 import com.example.personaldev.criminialsurveillanceapp.R;
 import com.example.personaldev.criminialsurveillanceapp.login_otp.Login_Screen;
 import com.example.personaldev.criminialsurveillanceapp.login_otp.User;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Authentication_Dashboard extends AppCompatActivity {
 
     private TextView BioMetricActivity;
     private TextView bg_verification;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    DatabaseReference myRef = database.getReference("");
+
+    //For Notification
+    private RequestQueue mRequestQue;
+    private String URL = "https://fcm.googleapis.com/fcm/send";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +77,8 @@ public class Authentication_Dashboard extends AppCompatActivity {
 //                Settings.Secure.ANDROID_ID);
 //        Log.i("BRET",android_id);
 
-
+        mRequestQue = Volley.newRequestQueue(this);
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
 
         Log.i("BRET", "REACHED");
 
@@ -92,6 +113,47 @@ public class Authentication_Dashboard extends AppCompatActivity {
             String imei = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
             return imei;
 
+        }
+    }
+
+    private void sendNotification(){
+        JSONObject mainObj = new JSONObject();
+        try {
+            mainObj.put("to","/topics/"+"news");
+            JSONObject notificationObj = new JSONObject();
+            notificationObj.put("title","Verification");
+            notificationObj.put("body", "Please do Video Verification");
+
+            mainObj.put("notification",notificationObj);
+
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, URL,
+                    mainObj,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            //code here will run
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //code here will run on error
+                        }
+                    }
+
+            ){
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String,String> header = new HashMap<>();
+                    header.put("content-type","application/json");
+                    header.put("authorization","key=AAAAPI5KTFc:APA91bHo3GyobQX3Zpo3n5G49YWDLdGWStXrP8uWQfYiOF0dEAzV69CyCQ_6VwBVyTvOsCCsAC3dVCVBwIQm8dnISAN_WRQ63UYOr9XMwSgBCOIpqyzoyQjl8FFuxQUuv9gw1WLGHklk");
+                    return header;
+                }
+            };
+
+            mRequestQue.add(request);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

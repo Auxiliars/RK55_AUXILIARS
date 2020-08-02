@@ -86,13 +86,19 @@ public class Inspect_Criminal extends AppCompatActivity implements View.OnClickL
 
         //Experimental
                 mRequestQue = Volley.newRequestQueue(this);
-        FirebaseMessaging.getInstance().subscribeToTopic("news");
+//        FirebaseMessaging.getInstance().subscribeToTopic("news");
 
         //Firebase Notification
+        icr_btn_verify_fingerprint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendNotification(1);
+            }
+        });
         icr_btn_verify_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendNotification();
+                sendNotification(0);
             }
         });
 
@@ -142,13 +148,21 @@ public class Inspect_Criminal extends AppCompatActivity implements View.OnClickL
 
          startActivity(intent0);
     }
-        private void sendNotification(){
+        private void sendNotification(int i){
         JSONObject mainObj = new JSONObject();
         try {
             mainObj.put("to","/topics/"+"news");
             JSONObject notificationObj = new JSONObject();
             notificationObj.put("title","Verification");
-            notificationObj.put("body", "Please to video Verification");
+            if(i==0)
+            {
+                notificationObj.put("body", "Please do Video Verification");
+
+            }
+            else{
+                notificationObj.put("body", "Please do Biometric Verification");
+
+            }
 
             mainObj.put("notification",notificationObj);
 
