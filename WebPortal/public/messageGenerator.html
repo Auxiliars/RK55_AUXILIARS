@@ -7,15 +7,44 @@
     <style>
         .content {
             color: #eee;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #fff;
-    padding:40px; 
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #fff;
+            padding:40px; 
         }
         label{
             color: black;
+            font-family: "Times New Roman", Times, serif;
+        }
+        input{
+            background: #f2f2f2; 
+            outline: 0;
+             width: 100%;
+            border: 0;
+            margin: 20px 0 20px 0;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        #submit-btn{
+            font-family: "Times New Roman", Times, serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 50%;
+            border: 0;
+            padding: 10px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+        #submit-btn:hover,#submit-btn:active,#submit-btn:focus {
+            background : #43A047;
         }
         #demo {
 
@@ -28,36 +57,36 @@
     <div class="content">
         
     <form action="" method="POST" id="msg-generator-form">
-   <div>     
-    <input type="text" name="name" id="name" placeholder="Enter There Name">
-</div>
-<div>
-    <label for="theme">Choose a theme</label>
-    <select name="theme" id="theme" required>
-      <optgroup label="Category">
-        <option value="random">Random</option>
-        <option value="music">Music</option>
-        <option value="shopping">Shopping</option>
-        <option value="quiz">Quiz</option>
-        <option value="glossary">Glossary</option>
-        <option value="food">Food</option>
-        <option value="game">Game</option>
+        <div>     
+            <input type="text" name="name" id="name" placeholder="Enter There Name">
+        </div>
+        <div>
+            <label for="theme">Choose a theme</label>
+            <select name="theme" id="theme" required>
+                <optgroup label="Category">
+                    <option value="random">Random</option>
+                    <option value="music">Music</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="glossary">Glossary</option>
+                    <option value="food">Food</option>
+                    <option value="game">Game</option>
    
-      </optgroup>
-    </select>
-</div>
-<div>
-    <input type="text" name="id" id="id" placeholder="Id" required>
-</div>
-    <Button id="submit-btn">Submit</Button>
-    <br>
-    <br>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <input type="text" name="id" id="id" placeholder="Id" required>
+        </div>
+        <Button id="submit-btn">Submit</Button>
+            <br>
+            <br>
     </form>    
     <label for="theme">The Generated Message is :</label>
         <p id="demo" style="color: black;">
         </p>
 
-</div>
+    </div>
 </body>
 <script src="messageGenerator.js"></script>
 </html>
