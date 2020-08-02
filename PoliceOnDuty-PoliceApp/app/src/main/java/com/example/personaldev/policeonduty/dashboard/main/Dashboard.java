@@ -27,6 +27,7 @@ import com.example.personaldev.policeonduty.dashboard.nav_drawer.Statistics_acti
 import com.example.personaldev.policeonduty.dashboard.toolbar.Toolbar_notification;
 import com.example.personaldev.policeonduty.dashboard.view_criminal_report.Criminal_detailed_view;
 import com.example.personaldev.policeonduty.R;
+import com.example.personaldev.policeonduty.face_verify;
 import com.google.android.material.navigation.NavigationView;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +42,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     Button db1_btn, db2_btn, db3_btn, db4_btn;
     ImageView notification_bell;
 
-    TextView db1_text,db2_text,db3_text,db4_text;
+    TextView db1_text,db2_text,db3_text,db4_text,db31_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,14 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View v) {
                 openNotificationActivity();
+            }
+        });
+
+        db31_text = findViewById(R.id.db31_text);
+        db31_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFaceRecognition();
             }
         });
 
@@ -183,6 +192,11 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         //for closing drawer on clickItem
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void openFaceRecognition(){
+        Intent intent31 = new Intent(this, face_verify.class);
+        startActivity(intent31);
     }
 
     public void openNotificationActivity(){

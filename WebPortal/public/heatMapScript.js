@@ -20,7 +20,7 @@
     function LoadMap() {
       //Retraving Longitude and latitude from database
       var database = firebase.database();
-      LocationArray.push(new google.maps.LatLng(21.247343 , 81.631776));
+     LocationArray.push(new google.maps.LatLng(21.247343 , 81.631776));
           var commentsRef =firebase.database().ref('criminal/');
           // commentsRef.on('value', gotData, errData);
         commentsRef.on("value", function(snapshot){
@@ -32,7 +32,6 @@
               LocationArray.push(new google.maps.LatLng(locationLatitude, locationLongitude));
             })
           }).then(initMap())
-          
           
          
          // mapLoad()
