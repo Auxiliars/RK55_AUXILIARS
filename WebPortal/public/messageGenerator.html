@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <style>
+        .content {
+            color: #eee;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding:40px; 
+        }
+        label{
+            color: black;
+        }
+        #demo {
+
+        }
+        
+        </style>
+    <title>Msg Generator</title>
+</head>
+<body>
+    <div class="content">
+        
+    <form action="" method="POST" id="msg-generator-form">
+   <div>     
+    <input type="text" name="name" id="name" placeholder="Enter There Name">
+</div>
+<div>
+    <label for="theme">Choose a theme</label>
+    <select name="theme" id="theme" required>
+      <optgroup label="Category">
+        <option value="random">Random</option>
+        <option value="music">Music</option>
+        <option value="shopping">Shopping</option>
+        <option value="quiz">Quiz</option>
+        <option value="glossary">Glossary</option>
+        <option value="food">Food</option>
+        <option value="game">Game</option>
+   
+      </optgroup>
+    </select>
+</div>
+<div>
+    <input type="text" name="id" id="id" placeholder="Id" required>
+</div>
+    <Button id="submit-btn">Submit</Button>
+    <br>
+    <br>
+    </form>    
+    <label for="theme">The Generated Message is :</label>
+        <p id="demo" style="color: black;">
+        </p>
+
+</div>
+</body>
+<script src="messageGenerator.js"></script>
+</html>
