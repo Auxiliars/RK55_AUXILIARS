@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".dashboard.nav_drawer.Statistics_activity">
 
     <!-- START Toolbar Header -->
@@ -54,13 +54,14 @@
         android:layout_marginTop="-30dp"
         android:background="@drawable/criminal_recycler_view"
         android:orientation="vertical"
-        android:paddingHorizontal="10dp"
-        >
+        android:paddingHorizontal="10dp">
 
         <WebView
             android:id="@+id/webViewStats"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
     </LinearLayout>
     <!-- End Statistics Content -->
 
