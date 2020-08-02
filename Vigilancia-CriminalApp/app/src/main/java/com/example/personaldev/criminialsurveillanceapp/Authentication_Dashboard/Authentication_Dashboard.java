@@ -27,6 +27,8 @@ public class Authentication_Dashboard extends AppCompatActivity {
 
     private TextView BioMetricActivity;
     private TextView bg_verification;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,0 +1,154 @@
+{
+  "project_info": {
+    "project_number": "260085271639",
+    "firebase_url": "https://auxiliars-c7b21.firebaseio.com",
+    "project_id": "auxiliars-c7b21",
+    "storage_bucket": "auxiliars-c7b21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260085271639:android:93f01aed24a8b69b8a2712",
+        "android_client_info": {
+          "package_name": "com.example.lakshmanrekha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260085271639-cbsnroust5tb9g3e618dvhkaqnh71sct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lakshmanrekha",
+            "certificate_hash": "0784c3bbbca357922f2fa6700ea1968125b16da1"
+          }
+        },
+        {
+          "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMyOHGG7fK32kVA5pg9-v3yOBKrfu9VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260085271639:android:c636add0a7756fef8a2712",
+        "android_client_info": {
+          "package_name": "com.example.personaldev.criminialsurveillanceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260085271639-pbofanmiqovkjb80rtl7iu1tspkve9l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.criminialsurveillanceapp",
+            "certificate_hash": "85422fc7cdc0472fd19b62c9eee487c150b2d743"
+          }
+        },
+        {
+          "client_id": "260085271639-42imvp1q4m8idd2gbm7ran2kcbcnnnck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.criminialsurveillanceapp",
+            "certificate_hash": "0784c3bbbca357922f2fa6700ea1968125b16da1"
+          }
+        },
+        {
+          "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMyOHGG7fK32kVA5pg9-v3yOBKrfu9VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260085271639:android:db211ff6113999c98a2712",
+        "android_client_info": {
+          "package_name": "com.example.personaldev.policeonduty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260085271639-j7et3g4ec5diibpmidlb7kt8q6icknhs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.policeonduty",
+            "certificate_hash": "b794a87fc8946c4538eb79527b2d5bf33425e0ec"
+          }
+        },
+        {
+          "client_id": "260085271639-632k6attst5agqt477sggs1vb5gl9tr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.policeonduty",
+            "certificate_hash": "833ab2ec06ba19603dad8415d7625ebc9e0a50ee"
+          }
+        },
+        {
+          "client_id": "260085271639-0squit8vm3tq4llmldc6392neaajc7k9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.policeonduty",
+            "certificate_hash": "0784c3bbbca357922f2fa6700ea1968125b16da1"
+          }
+        },
+        {
+          "client_id": "260085271639-7bj0pq7lgh2nl3560h5go7sga6177a6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personaldev.policeonduty",
+            "certificate_hash": "2aef33ca31a3e943652852084da46c5dba37566b"
+          }
+        },
+        {
+          "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMyOHGG7fK32kVA5pg9-v3yOBKrfu9VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260085271639-kguiraud1chhdeq8s4knr3chcsb87cdf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

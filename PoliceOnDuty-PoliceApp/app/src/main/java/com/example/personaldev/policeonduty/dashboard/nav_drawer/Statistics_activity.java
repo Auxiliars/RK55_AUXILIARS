@@ -19,7 +19,7 @@ public class Statistics_activity extends AppCompatActivity {
     ImageView backActivity;
     WebView webView;
     WebSettings webSettings;
-    String crimeStatsUrl= "https://auxiliarsweb.web.app/crimeStats";
+    String crimeStatsUrl= "https://auxiliarsweb.web.app/webStats.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
