@@ -132,10 +132,10 @@ public class Inspect_Criminal extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(this, "Calling Criminal", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.icr_verify_fingerprint:
-                Toast.makeText(this, "Fingerprint Verified", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Sent for fingerprint Authentication", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.icr_verify_video:
-                Toast.makeText(this, "Video Authenticated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Sent for background Authentication", Toast.LENGTH_SHORT).show();
                 break;
         }
 

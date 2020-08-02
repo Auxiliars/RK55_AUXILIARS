@@ -32,4 +32,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <string name="bio_auth">Biometric Authentication</string>
+    <string name="bg_auth">Background Authentication</string>
+    <string name="auth_send">Ask for Periodic Authentication</string>
+
 </resources>

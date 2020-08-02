@@ -170,7 +170,7 @@
                 android:focusable="false"
                 android:fontFamily="@font/baloo"
                 android:includeFontPadding="false"
-                android:text="Background Video Authentication Status"
+                android:text="@string/bio_auth"
                 android:textColor="@color/basic_black" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -191,21 +191,13 @@
 
             <Button
                 android:id="@+id/icr_verify_video"
-                android:layout_width="270dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
-                android:text="Verify Video"
+                android:text="@string/auth_send"
                 android:textAllCaps="false"
                 android:textColor="@color/basic_white" />
 
-            <Button
-                android:id="@+id/icr_verify_video_tick"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/icr_verify_video"
-                android:background="#00000000"
-                android:drawableRight="@drawable/inspect_tick_icon"
-                android:drawablePadding="10dp" />
 
         </RelativeLayout>
 
@@ -225,7 +217,7 @@
                 android:focusable="false"
                 android:fontFamily="@font/baloo"
                 android:includeFontPadding="false"
-                android:text="Biometric Status"
+                android:text="@string/bg_auth"
                 android:textColor="@color/basic_black" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -246,21 +238,13 @@
 
             <Button
                 android:id="@+id/icr_verify_fingerprint"
-                android:layout_width="270dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
-                android:text="Verify Fingerprint"
+                android:text="@string/auth_send"
                 android:textAllCaps="false"
                 android:textColor="@color/basic_white" />
 
-            <Button
-                android:id="@+id/icr_verify_fingerprint_tick"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/icr_verify_fingerprint"
-                android:background="#00000000"
-                android:drawableRight="@drawable/inspect_tick_icon"
-                android:drawablePadding="10dp" />
 
         </RelativeLayout>
 
