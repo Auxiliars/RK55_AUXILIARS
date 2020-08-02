@@ -1,6 +1,5 @@
 
 //Firebase init 
-
 var firebaseConfig = {
   apiKey: "AIzaSyBghW9N54DAOpj2De3sKwO8SBcAxFQPX6M",
   authDomain: "auxiliarsweb.firebaseapp.com",

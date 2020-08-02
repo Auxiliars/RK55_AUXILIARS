@@ -14,9 +14,7 @@ process.env.FIREBASE_PRIVATE_KEY =""
 //   });
 
 
-app.use(express.static('public'))
-app.use(express.static('public/images'))
-app.use(express.static('public/shopping'))
+app.use(express.static("public"))
 
 
 
