@@ -156,10 +156,12 @@ public class Inspect_Criminal extends AppCompatActivity implements View.OnClickL
             notificationObj.put("title","Verification");
             if(i==0)
             {
+                Toast.makeText(this,"Sent For Background Verification",Toast.LENGTH_LONG).show();
                 notificationObj.put("body", "Please do Video Verification");
 
             }
             else{
+                Toast.makeText(this,"Sent For Background Verification",Toast.LENGTH_LONG).show();
                 notificationObj.put("body", "Please do Biometric Verification");
 
             }
