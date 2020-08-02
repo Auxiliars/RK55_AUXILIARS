@@ -1,6 +1,3 @@
-var CryptoJS = require("crypto-js");
-console.log(CryptoJS.HmacSHA1("Message", "Key"));
-    
     // Your web app's Firebase configuration
 
     var firebaseConfig = {

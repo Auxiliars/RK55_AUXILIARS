@@ -30,14 +30,16 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".Authentication_Dashboard.Authentication_Dashboard">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".login_otp.Login_Screen" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
