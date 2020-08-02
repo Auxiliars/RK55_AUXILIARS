@@ -38,7 +38,7 @@
           longi = snapshot.val()["currLocation"][1]
 
               console.log(lat,longi)
-              addMarkers(lat,longi)
+              addMarkers(lat,longi,ID)
             })
           
           
@@ -62,10 +62,24 @@
             }
       
         
-            const addMarkers = (latm,longi) =>{
-              console.log(latm,longi +" as")
-              var uluru = {lat:parseFloat(latm),lng:parseFloat(longi)}
-              var marker = new google.maps.Marker({position: uluru, map: map});
+            const addMarkers = (latm,longi,ID) =>{
+              
+              
+              
+              // console.log(latm,longi +" as")
+              // var uluru = {lat:parseFloat(latm),lng:parseFloat(longi)}
+              // var marker = new google.maps.Marker({position: uluru, map: map});
+              const myLatLng = { lat: longi, lng: latm };
+
+              const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 9,
+                center: myLatLng
+              });
+              new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: ID
+              });
               
             }
         
