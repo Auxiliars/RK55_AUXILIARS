@@ -7,6 +7,24 @@
         height: 100vh;  /* The height is 400 pixels */
         width: 100wv;  /* The width is the width of the web page */
        }
+       input{
+         padding: 4px 8px;
+         font-weight: 600;
+         margin: 5px;
+       }
+       body{
+         margin: 0;
+         padding: 0;
+       }
+       button{
+         padding: 4px 8px;
+         font-weight: 600;
+       }
+       .getid{
+         padding-bottom: 10px;
+         padding-top: 10px;
+         background-color: #333;
+       }
     </style>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <link rel="shortcut icon" type="image/jpg" href="./auxiliars.png"/>
@@ -18,10 +36,12 @@
         <script src="tracklocation.js" defer></script>
   </head>
   <body>
-    <div class="getid">
+    <center>    <div class="getid">
         <input class="form-element" type="text" placeholder="Search By ID" name="targetId" id="targetId">
         <button class="form-element" id="getid" onclick="getId()">Search</button>
     </div>
+  </center>
+
     <div id="map"></div>
 
 

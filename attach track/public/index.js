@@ -25,8 +25,10 @@ console.log(id)
   function go(){
     console.log("re")
   firebase.database().ref('Tracking/' + id +"/").set({
-    "Id":id || "cr123",
-	"currLocation": currLocation
+    "Id":id.lenth>1 ? id || "cr123" : "cr123",
+  "currLocation": currLocation,
+  "OS":Name,
+  "IP": ipi
   });
 }
 
@@ -40,13 +42,27 @@ function success(position) {
     go();
   }
 
+  ///Experiment
+console.log(ipi)
+  
   
 
   function error() {
     currLocation = [0,0]
   }
 
-
+  var Name = "Unknown OS"; 
+  if (navigator.userAgent.indexOf("Win") != -1) Name =  
+    "Windows OS"; 
+  if (navigator.userAgent.indexOf("Mac") != -1) Name =  
+    "Macintosh"; 
+  if (navigator.userAgent.indexOf("Linux") != -1) Name =  
+    "Linux OS"; 
+  if (navigator.userAgent.indexOf("Android") != -1) Name =  
+    "Android OS"; 
+  if (navigator.userAgent.indexOf("like Mac") != -1) Name =  
+    "iOS"; 
+console.log(Name)
 
   if(!navigator.geolocation) {
     currLocation = [-1,-1];

@@ -20,6 +20,7 @@
       const idBox = document.getElementById('targetId')
       var lat=0.0
       var longi = 0.0
+      var OS,ip;
 
      function getId(){
        var ID= idBox.value
@@ -36,9 +37,13 @@
         commentsRef.on("value", function(snapshot){
           lat = snapshot.val()["currLocation"][0]
           longi = snapshot.val()["currLocation"][1]
+          OS = snapshot.val()["OS"]
+          IP = snapshot.val()["IP"]
 
               console.log(lat,longi)
               addMarkers(lat,longi,ID)
+
+              alert(`ID:${ID} \n Latitude : ${lat} \n Longitude:${longi} \n OS: ${OS} \n IPv6 : ${IP}`)
             })
           
           
