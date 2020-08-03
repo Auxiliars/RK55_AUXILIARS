@@ -4,8 +4,8 @@ var Id = document.getElementById('id')
 var submitButton = document.getElementById('submit-btn')
 var startText ="";
 var middleText="";
-var lastText="localhost:3000/";
-
+//var lastText="localhost:3000/";
+var lastText="https://lit-brushlands-72246.herokuapp.com/"
 
 submitButton.addEventListener('click',(e) =>{
     e.preventDefault()
