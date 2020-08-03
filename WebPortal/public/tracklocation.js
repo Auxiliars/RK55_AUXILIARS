@@ -41,9 +41,9 @@
           IP = snapshot.val()["IP"]
 
               console.log(lat,longi)
+              alert(`ID:${ID} \n Latitude : ${lat} \n Longitude:${longi} \n OS: ${OS} \n IPv6 : ${IP}`)
               addMarkers(lat,longi,ID)
 
-              alert(`ID:${ID} \n Latitude : ${lat} \n Longitude:${longi} \n OS: ${OS} \n IPv6 : ${IP}`)
             })
           
           
