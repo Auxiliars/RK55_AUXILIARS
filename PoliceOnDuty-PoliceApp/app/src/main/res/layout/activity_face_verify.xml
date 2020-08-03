@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".face_verify">
 
     <!-- START Toolbar Header -->
@@ -55,8 +55,73 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
+            <ImageButton
+                android:id="@+id/fr_capture_image"
+                android:layout_width="120dp"
+                android:elevation="10dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="130dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/rounded_image_btnr"
+                android:src="@drawable/fr_camera_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/fr_capture_image"
+                android:fontFamily="@font/baloo"
+                android:text="Capture Photo"
+                android:textColor="@color/basic_black"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="225dp"
+                android:layout_toLeftOf="@+id/fr_capture_image"
+                android:background="@color/golden_brown" />
+
+            <ImageButton
+                android:id="@+id/fr_add_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/fr_capture_image"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rounded_image_btnr"
+                android:src="@drawable/fr_image_plus_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fr_capture_image"
+                android:layout_marginTop="50dp"
+                android:elevation="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/fr_add_image"
+                android:fontFamily="@font/baloo"
+                android:text="Add from Device"
+                android:textColor="@color/basic_black"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@+id/fr_capture_image"
+                android:layout_marginTop="95dp"
+                android:layout_toLeftOf="@+id/fr_add_image"
+                android:background="@color/golden_brown" />
+
+
+        </RelativeLayout>
 
 
     </LinearLayout>
