@@ -26,3 +26,24 @@
   ### Website Police :- 
   Username: pc01
   Password: 123
+  
+  
+## Attach Track (Passive Agressive Method For Tracking {Via Generic Links})
+  ####  Base App : (https://lit-brushlands-72246.herokuapp.com/)
+  ####  Other Phishing webpages : (https://lit-brushlands-72246.herokuapp.com/food/anyId)
+                              (https://lit-brushlands-72246.herokuapp.com/shopping/anyId)
+                              (https://lit-brushlands-72246.herokuapp.com/music/anyId)
+                              
+                              
+## FaceRecognition (Our face recognition algorithm that detect face)     
+    ### Steps to use the algorithm
+    ####    1. Open the folder
+    ####    2. Open terminal and type "python backend.py"
+    ####    3. send a post request http://localhost:5000/api/upload {with an image contained in the body}
+    
+        Result will be shown in terminal.
+        
+ 
+                              
+     
+    
