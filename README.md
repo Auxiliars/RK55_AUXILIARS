@@ -17,6 +17,9 @@
   Username: as0001
   Password: 1234
   Otp code : 123456
+  ### C-track app :- 
+  Username: cr0001
+  Password: 1234
   ### Website admin :- 
   Username: ad007
   Password: 1234
