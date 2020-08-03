@@ -15,7 +15,7 @@ submitButton.addEventListener('click',(e) =>{
     var id = Id.value;
   console.log(name+theme+id);
   if(theme=="music"){
-    middleText = " here's a website for you. Listen to your fav songs click this link ";
+    middleText = " Music to me is like breathing - I don't get tired of breathing, I don't get tired of music. Here's a website for you. Listen to your fav songs click this link ";
 }
 else if(theme=="shopping"){
     middleText = " here's a website for you. Checkout the new stock of your fav product "
@@ -27,7 +27,7 @@ else if(theme=="glossary"){
     middleText = " here's a website for you. Checkout the new stock in the glossary "
 }
 else if(theme=="food"){
-    middleText = " here's a website for you. Checkout the new food in the market "
+    middleText = " Quick! The hot light is on! Come in a get a fresh donut and we'll give you a free cup of a coffe. Offer only good for the next three hours. "
 }
 else if(theme=="game"){
     middleText = " here's a website for you. Checkout the new game for you "
